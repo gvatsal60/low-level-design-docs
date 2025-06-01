@@ -1,4 +1,4 @@
-# Contributing to [low-level-design-docs](#contributing-to-project-name)
+# Contributing to low-level-design-docs
 
 Thank you for your interest in contributing to [low-level-design-docs](https://github.com/gvatsal60/low-level-design-docs)!
 Please follow these guidelines to ensure a smooth process.
