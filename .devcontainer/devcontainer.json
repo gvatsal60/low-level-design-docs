@@ -6,13 +6,13 @@
     "vscode": {
       "extensions": [
         "DavidAnson.vscode-markdownlint",
+        "MindpathTechnologyLimited.code-error-lens",
         "Tyriar.sort-lines",
         "bradzacher.vscode-copy-filename",
         "foxundermoon.shell-format",
         "ms-azuretools.vscode-docker",
         "ms-vscode.cpptools",
-        "streetsidesoftware.code-spell-checker",
-        "usernamehw.errorlens"
+        "streetsidesoftware.code-spell-checker"
       ],
       "settings": {
         "[cpp]": {
@@ -31,7 +31,6 @@
         },
         "editor.bracketPairColorization.enabled": true,
         "editor.comments.insertSpace": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.detectIndentation": false,
         "editor.insertSpaces": true,
         "editor.snippetSuggestions": "top",
