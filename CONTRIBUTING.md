@@ -1,6 +1,6 @@
-# Contributing to [Project Name](#contributing-to-project-name)
+# Contributing to [low-level-design-docs](#contributing-to-project-name)
 
-Thank you for your interest in contributing to [Project Name](https)!
+Thank you for your interest in contributing to [low-level-design-docs](https://github.com/gvatsal60/low-level-design-docs)!
 Please follow these guidelines to ensure a smooth process.
 
 ## How to Contribute
@@ -15,7 +15,7 @@ Please follow these guidelines to ensure a smooth process.
 ## Code Style
 
 [Describe your coding style guidelines here, if applicable.](#code-style)
-We follow the [coding style guide](link_to_style_guide) for this project.
+We follow the [coding style guide](https://google.github.io/styleguide/cppguide.html) for this project.
 
 ## Reporting Bugs
 
