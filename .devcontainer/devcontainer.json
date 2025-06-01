@@ -6,18 +6,13 @@
     "vscode": {
       "extensions": [
         "DavidAnson.vscode-markdownlint",
-        "Gruntfuggly.todo-tree",
-        "PKief.material-icon-theme",
-        "SonarSource.sonarlint-vscode",
+        "MindpathTechnologyLimited.code-error-lens",
         "Tyriar.sort-lines",
         "bradzacher.vscode-copy-filename",
-        "esbenp.prettier-vscode",
         "foxundermoon.shell-format",
-        "gurumukhi.selected-lines-count",
-        "marvhen.reflow-markdown",
         "ms-azuretools.vscode-docker",
-        "streetsidesoftware.code-spell-checker",
-        "usernamehw.errorlens"
+        "ms-vscode.cpptools",
+        "streetsidesoftware.code-spell-checker"
       ],
       "settings": {
         "[cpp]": {
@@ -25,25 +20,6 @@
           "C_Cpp.codeAnalysis.clangTidy.enabled": true,
           "C_Cpp.intelliSenseEngine": "default",
           "editor.defaultFormatter": "ms-vscode.cpptools"
-        },
-        "[dockercompose]": {
-          "editor.autoIndent": "advanced",
-          "editor.defaultFormatter": "ms-azuretools.vscode-docker",
-          "editor.insertSpaces": true,
-          "editor.quickSuggestions": {
-            "comments": false,
-            "other": true,
-            "strings": true
-          },
-          "editor.tabSize": 2,
-          "files.eol": "\n"
-        },
-        "[dockerfile]": {
-          "editor.defaultFormatter": "ms-azuretools.vscode-docker",
-          "editor.quickSuggestions": {
-            "strings": true
-          },
-          "files.eol": "\n"
         },
         "[markdown]": {
           "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
@@ -55,7 +31,6 @@
         },
         "editor.bracketPairColorization.enabled": true,
         "editor.comments.insertSpace": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.detectIndentation": false,
         "editor.insertSpaces": true,
         "editor.snippetSuggestions": "top",
@@ -83,12 +58,11 @@
         },
         "telemetry.telemetryLevel": "off",
         "windows.title": "${folderPath}",
-        "workbench.iconTheme": "material-icon-theme",
         "workbench.startupEditor": "none"
       }
     }
   },
-  "image": "mcr.microsoft.com/devcontainers/javascript-node",
+  "image": "mcr.microsoft.com/devcontainers/cpp",
   "mounts": [
     "source=${localWorkspaceFolder}/snippets,target=${containerWorkspaceFolder}/.vscode,type=bind,consistency=cached"
   ],
