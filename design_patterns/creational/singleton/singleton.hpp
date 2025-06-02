@@ -94,12 +94,7 @@ class LazySingleton {
   LazySingleton() = default;
 
   // Destructor
-  ~LazySingleton() {
-    if (instance != nullptr) {
-      delete instance;     // Clean up the instance if needed
-      instance = nullptr;  // Set the instance pointer to null
-    }
-  }
+  ~LazySingleton() = default;
 
   static LazySingleton *instance;  // Pointer to the singleton instance
 };
@@ -118,13 +113,8 @@ class ThreadSafeSingleton {
 
   // Static method to access the `singleton` instance
   static ThreadSafeSingleton &getInstance() {
-    if (instance == nullptr) {
-      // Lock the mutex to ensure thread safety during instance creation
-      std::lock_guard<std::mutex> lock(mutex);
-      if (instance == nullptr) {
-        instance = new ThreadSafeSingleton();
-      }
-    }
+    // Use std::call_once to ensure that the instance is created only once
+    std::call_once(initFlag, []() { instance = new ThreadSafeSingleton(); });
 
     return *instance;
   }
@@ -134,15 +124,10 @@ class ThreadSafeSingleton {
   ThreadSafeSingleton() = default;
 
   // Destructor
-  ~ThreadSafeSingleton() {
-    if (instance != nullptr) {
-      delete instance;     // Clean up the instance if needed
-      instance = nullptr;  // Set the instance pointer to null
-    }
-  }
+  ~ThreadSafeSingleton() = default;
 
   static ThreadSafeSingleton *instance;  // Pointer to the singleton instance
-  static std::mutex mutex;               // Mutex for thread safety
+  static std::once_flag initFlag;  // Once flag for thread-safe initialization
 };
 
 #endif
