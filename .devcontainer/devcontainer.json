@@ -16,9 +16,6 @@
       ],
       "settings": {
         "[cpp]": {
-          "C_Cpp.autocompleteAddParentheses": true,
-          "C_Cpp.codeAnalysis.clangTidy.enabled": true,
-          "C_Cpp.intelliSenseEngine": "default",
           "editor.defaultFormatter": "ms-vscode.cpptools"
         },
         "[markdown]": {
@@ -38,7 +35,6 @@
         "editor.tabSize": 2,
         "editor.trimAutoWhitespace": true,
         "explorer.confirmDelete": false,
-        "extensions.autoUpdate": true,
         "extensions.ignoreRecommendations": true,
         "files.associations": {
           "*.code-snippets": "jsonc"
@@ -56,8 +52,6 @@
           "**/bower_components": true,
           "**/node_modules": true
         },
-        "telemetry.telemetryLevel": "off",
-        "windows.title": "${folderPath}",
         "workbench.startupEditor": "none"
       }
     }
