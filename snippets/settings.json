@@ -1,6 +1,0 @@
-{
-  "files.associations": {
-    "*.code-snippets": "jsonc",
-    "mutex": "cpp"
-  }
-}
