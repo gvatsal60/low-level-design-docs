@@ -22,8 +22,8 @@
 /***************************************************************************************
  * Includes
  **************************************************************************************/
-#ifndef _SINGLETON_H_
-#define _SINGLETON_H_
+#ifndef _SINGLETON_HPP_
+#define _SINGLETON_HPP_
 
 #include <cstdio>
 #include <mutex>
