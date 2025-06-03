@@ -22,8 +22,8 @@
 /***************************************************************************************
  * Includes
  **************************************************************************************/
-#ifndef _SINGLETON_HPP_
-#define _SINGLETON_HPP_
+#ifndef SINGLETON_GUARD
+#define SINGLETON_GUARD
 
 #include <cstdio>
 #include <mutex>
