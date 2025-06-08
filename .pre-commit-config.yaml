@@ -98,16 +98,3 @@ repos:
     hooks:
       - id: talisman-commit
         entry: cmd --githook pre-commit
-  # Pre-commit hooks for C/C++ code quality
-  - repo: https://github.com/pocc/pre-commit-hooks
-    rev: "v1.3.5"
-    hooks:
-      - id: clang-format
-        args: [--style=Google]
-      - id: clang-tidy
-      - id: oclint
-      - id: uncrustify
-      - id: cppcheck
-        args: [--enable=all]
-      - id: cpplint
-      - id: include-what-you-use
