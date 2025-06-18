@@ -15,7 +15,7 @@
  * License
  **************************************************************************************/
 /*
- * This file is licensed under the MIT License.
+ * This file is licensed under the Apache 2.0 License.
  * License information should be updated as necessary.
  */
 
@@ -41,7 +41,7 @@
  **************************************************************************************/
 
 /*
- * EagerSingleton class
+ * EagerSingleton Class
  * This class implements the Singleton design pattern using eager
  * initialization. It ensures that only one instance of the class is created at
  * program startup, and provides a global point of access to that instance.
@@ -68,7 +68,7 @@ class EagerSingleton {
 };
 
 /*
- * LazySingleton class
+ * LazySingleton Class
  * This class implements the Singleton design pattern using lazy initialization.
  * It ensures that only one instance of the class is created and provides a
  * global point of access to that instance.
@@ -100,7 +100,7 @@ class LazySingleton {
 };
 
 /*
- * ThreadSafeSingleton class
+ * ThreadSafeSingleton Class
  * This class implements the Singleton design pattern with thread safety.
  * It ensures that only one instance of the class is created, even in a
  * multithreaded environment.
