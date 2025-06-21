@@ -25,6 +25,26 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Generate index.md for internal folders
+        run: |
+          find design_patterns -type d | while read dir; do
+            if [ ! -f "$dir/index.md" ] && [ "$dir" != "design_patterns" ]; then
+              echo "---" > "$dir/index.md"
+              echo "title: Index of $dir" >> "$dir/index.md"
+              echo "layout: default" >> "$dir/index.md"
+              echo "---" >> "$dir/index.md"
+              echo "# Index of $dir" >> "$dir/index.md"
+              echo "" >> "$dir/index.md"
+              for f in "$dir"/*; do
+                fname=$(basename "$f")
+                if [ -d "$f" ]; then
+                  echo "- 📁 [$fname]($fname/index.md)" >> "$dir/index.md"
+                elif [ -f "$f" ] && [ "$fname" != "index.md" ]; then
+                  echo "- 📄 [$fname]($fname)" >> "$dir/index.md"
+                fi
+              done
+            fi
+          done
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
