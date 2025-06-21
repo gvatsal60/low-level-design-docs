@@ -40,7 +40,7 @@ When running the example code, you will see the addresses of the singleton insta
 ```text
 Eager Singleton instance address: 0x55f8c8e2c2e0
 Lazy Singleton instance address: 0x55f8c8e2c300
-Thread Safe Singleton instance address: 0x55f8c8e2c320
+Thread-Safe Singleton instance address: 0x55f8c8e2c320
 ```
 
 ## References
