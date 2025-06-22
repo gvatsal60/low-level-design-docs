@@ -15,4 +15,4 @@ Explore each pattern below for clear explanations and practical code samples:
 
 ---
 
-_Navigate to each pattern for in-depth guides and hands-on
+_Navigate to each pattern for in-depth guides and hands-on code examples._

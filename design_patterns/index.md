@@ -2,7 +2,7 @@
 
 ---
 
-## 🚀 [Creational](creational)
+## 🚀 [Creational](creational/)
 >
 > *Documentation and examples for* **creational** *design patterns.*
 
