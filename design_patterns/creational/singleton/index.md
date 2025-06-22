@@ -12,6 +12,8 @@ throughout the entire application, providing a global access point for it.
 - ✅ **Thread-Safe**: Automatically safe from thread issues because it's initialized during static setup.
 - ❌ **Resource Waste**: If the instance isn't used, it still consumes resources.
 
+<script src="https://gist.github.com/gvatsal60/844bcfe9dcfbefe60abae5d53aca3ed7.js"></script>
+
 ---
 
 ### 2️⃣ **Lazy Initialization** 🕒
