@@ -5,7 +5,7 @@ author: "@gvatsal60"
 baseurl: "design_patterns" # Leave as '/' unless you're deploying in a sub-folder
 
 # Theme settings
-remote_theme: "mmistakes/minimal-mistakes@4.27.1"
+# remote_theme: ""
 
 # Navigation settings
 navigation:
