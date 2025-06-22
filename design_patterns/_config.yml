@@ -3,21 +3,19 @@ title: ""
 description: "A comprehensive guide to design patterns, best practices, and real-world examples."
 author: "@gvatsal60"
 baseurl: "design_patterns" # Leave as '/' unless you're deploying in a sub-folder
-
 # Just the Docs theme settings
 theme:
   name: "just-the-docs" # Use the Just the Docs theme
   logo: "" # Optional logo path (can be customized)
   remote_theme: "pmarsceill/just-the-docs" # The theme's GitHub repository
   dark_mode: true # Enable dark mode (optional)
-
 # Navigation settings
 navigation:
   - Home: "/"
-  # - Introduction: "/introduction/"
-  # - Design Patterns: "/patterns/"
-  # - Blog: "/blog/"
-  # - Contact: "/contact/"
+# - Introduction: "/introduction/"
+# - Design Patterns: "/patterns/"
+# - Blog: "/blog/"
+# - Contact: "/contact/"
 
 # Exclude files
 exclude:
@@ -26,26 +24,20 @@ exclude:
   - "*.hpp"
   - "*.c++"
   - "*.cc"
-
 # Plugins (optional)
 plugins:
   - jekyll-relative-links
   - jekyll-seo-tag
-
 # Relative links configuration
 relative_links:
   enabled: true
   collections: true
-
 # Markdown settings
 markdown: kramdown
 kramdown:
   input: GFM # GitHub Flavored Markdown
-
-
 # Permalinks (define how URLs should look for pages)
 permalink: /:categories/:title/
-
 # Default layout for posts and pages
 defaults:
   - scope:
@@ -54,17 +46,14 @@ defaults:
     values:
       layout: "post"
       author: "@gvatsal60"
-
   - scope:
       path: ""
       type: "pages"
     values:
       layout: "page"
-
 # Footer
 footer:
   text: ""
-
 # Analytics (optional)
 # google_analytics: "UA-XXXXXXXX-X"
 
