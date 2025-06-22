@@ -1,19 +1,19 @@
-# 🎨 **Design Patterns Index**
+# 🧩 **Design Patterns Index**
 
 ---
 
-## 🚀 [Creational](creational/)
+## 🏗️ [Creational](creational/)
 >
 > *Documentation and examples for* **creational** *design patterns.*
 
 ---
 
-## 🏗️ [Structural](structural)
+## 🧱 [Structural](structural)
 >
 > *Documentation and examples for* **structural** *design patterns.*
 
 ---
 
-## 🔄 [Behavioral](behavioral)
+## 🎭 [Behavioral](behavioral)
 >
 > *Documentation and examples for* **behavioral** *design patterns.*
