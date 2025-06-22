@@ -1,11 +1,11 @@
-plugins:
-  - jekyll-relative-links
-relative_links:
-  enabled: true
-  collections: true
 exclude:
   - "*.cpp"
   - "*.h"
   - "*.hpp"
   - "*.c++"
   - "*.cc"
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
