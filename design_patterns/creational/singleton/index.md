@@ -12,8 +12,6 @@ throughout the entire application, providing a global access point for it.
 - ✅ **Thread-Safe**: Automatically safe from thread issues because it's initialized during static setup.
 - ❌ **Resource Waste**: If the instance isn't used, it still consumes resources.
 
-[View Code on GitHub 🔗](https://github.com/gvatsal60/low-level-design-docs/blob/HEAD/design_patterns/creational/singleton/singleton.hpp#L49-L68)
-
 ---
 
 ### 2️⃣ **Lazy Initialization** 🕒
@@ -22,16 +20,12 @@ throughout the entire application, providing a global access point for it.
 - ⚠️ **Not Thread-Safe**: May cause multiple instances in a multi-threaded environment.
 - 🧠 **Efficient**: Works best for single-threaded apps or when instance creation is not always needed.
 
-[View Code on GitHub 🔗](https://github.com/gvatsal60/low-level-design-docs/blob/HEAD/design_patterns/creational/singleton/singleton.hpp#L76-L100)
-
 ---
 
 ### 3️⃣ **Thread-Safe Singleton** 🔒
 
 - 🔑 **Thread-Safe**: Guarantees only one instance even in multi-threaded environments.
 - 💡 Uses `std::call_once` and `std::once_flag` to prevent race conditions.
-
-[View Code on GitHub 🔗](https://github.com/gvatsal60/low-level-design-docs/blob/HEAD/design_patterns/creational/singleton/singleton.hpp#L108-L131)
 
 ---
 
