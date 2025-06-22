@@ -2,7 +2,7 @@
 title: ""
 description: "A comprehensive guide to design patterns, best practices, and real-world examples."
 author: "@gvatsal60"
-baseurl: "design_patterns" # Leave as '/' unless you're deploying in a sub-folder
+# baseurl: "design_patterns" # Leave as '/' unless you're deploying in a sub-folder
 # Exclude files
 exclude:
   - "*.cpp"
@@ -15,11 +15,7 @@ plugins:
   - jekyll-relative-links
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-feed
 # Relative links configuration
 relative_links:
   enabled: true
   collections: true
-# Footer
-footer:
-  text: "A comprehensive guide to design patterns, best practices, and real-world examples."
