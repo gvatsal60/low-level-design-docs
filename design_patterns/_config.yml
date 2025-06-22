@@ -5,18 +5,11 @@ author: "@gvatsal60"
 baseurl: "design_patterns" # Leave as '/' unless you're deploying in a sub-folder
 
 # Theme settings
-theme:
-  name: "minimal-mistakes-jekyll"
-  logo: "" # Optional logo path (can be customized)
-  dark_mode: true # Enable dark mode (optional)
+remote_theme: "mmistakes/minimal-mistakes@4.27.1"
 
 # Navigation settings
 navigation:
   - Home: "/"
-# - Introduction: "/introduction/"
-# - Design Patterns: "/patterns/"
-# - Blog: "/blog/"
-# - Contact: "/contact/"
 
 # Enable the search feature
 search:
@@ -49,24 +42,10 @@ relative_links:
 # Markdown settings
 markdown: kramdown
 kramdown:
-  input: GFM # GitHub Flavored Markdown
+  syntax_highlighter: coderay
 
 # Permalinks (define how URLs should look for pages)
 permalink: /:categories/:title/
-
-# Default layout for posts and pages
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      author: "@gvatsal60"
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
 
 # Footer
 footer:
