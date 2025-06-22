@@ -5,17 +5,17 @@ Explore each pattern below for clear explanations and practical code samples:
 
 ---
 
-- 🔗 [**Chain of Responsibility**](chain_of_responsibility)
-- 📝 [**Command**](command)
-- 🗣️ [**Interpreter**](interpreter)
-- 🔄 [**Iterator**](iterator)
-- 🕹️ [**Mediator**](mediator)
-- 🗃️ [**Memento**](memento)
-- 👀 [**Observer**](observer)
-- 🌀 [**State**](state)
-- 🧠 [**Strategy**](strategy)
-- 🏗️ [**Template Method**](template_method)
-- 🧳 [**Visitor**](visitor)
+- 🔗 [**Chain of Responsibility**](chain_of_responsibility/)
+- 📝 [**Command**](command/)
+- 🗣️ [**Interpreter**](interpreter/)
+- 🔄 [**Iterator**](iterator/)
+- 🕹️ [**Mediator**](mediator/)
+- 🗃️ [**Memento**](memento/)
+- 👀 [**Observer**](observer/)
+- 🌀 [**State**](state/)
+- 🧠 [**Strategy**](strategy/)
+- 🏗️ [**Template Method**](template_method/)
+- 🧳 [**Visitor**](visitor/)
 
 ---
 
