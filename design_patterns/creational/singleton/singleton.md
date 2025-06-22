@@ -7,18 +7,15 @@ This is useful when exactly one object is needed to coordinate actions across th
 
 ### 1. Eager Initialization
 
-- The instance is created at program startup.
-- Simple and thread-safe.
-- May lead to resource wastage if the instance is never used.
-
-```cpp
-EagerSingleton &instance = EagerSingleton::getInstance();
-```
+- The singleton instance is created as soon as the program starts, before any function accesses it.
+- This approach is inherently thread-safe because the instance is constructed during static initialization.
+- It is simple to implement, but may waste resources if the instance is never actually used during the program's execution.
 
 ### 2. Lazy Initialization
 
-- The instance is created only when it is first needed.
-- Not thread-safe by default.
+- The singleton instance is created only when it is first accessed.
+- This approach is not thread-safe by default and may create multiple instances in a multithreaded environment.
+- It is simple and efficient for single-threaded applications.
 
 ```cpp
 LazySingleton &instance = LazySingleton::getInstance();
@@ -26,8 +23,8 @@ LazySingleton &instance = LazySingleton::getInstance();
 
 ### 3. Thread-Safe Singleton
 
-- Ensures that only one instance is created even in multithreaded environments.
-- Uses `std::call_once` and `std::once_flag` for thread safety.
+- Ensures that only one instance is created, even in multithreaded environments.
+- Achieves thread safety using `std::call_once` and `std::once_flag` to control initialization.
 
 ```cpp
 ThreadSafeSingleton &instance = ThreadSafeSingleton::getInstance();
