@@ -3,18 +3,6 @@ title: ""
 description: "A comprehensive guide to design patterns, best practices, and real-world examples."
 author: "@gvatsal60"
 baseurl: "design_patterns" # Leave as '/' unless you're deploying in a sub-folder
-# Theme settings
-# remote_theme: ""
-
-# Navigation settings
-navigation:
-  - Home: "/"
-# Enable the search feature
-search:
-  enabled: true
-# Enable table of contents for markdown pages
-toc:
-  enabled: true
 # Exclude files
 exclude:
   - "*.cpp"
@@ -32,19 +20,6 @@ plugins:
 relative_links:
   enabled: true
   collections: true
-# Markdown settings
-markdown: kramdown
-kramdown:
-  syntax_highlighter: coderay
-# Permalinks (define how URLs should look for pages)
-permalink: /:categories/:title/
 # Footer
 footer:
   text: "A comprehensive guide to design patterns, best practices, and real-world examples."
-# Analytics (optional)
-# google_analytics: "UA-XXXXXXXX-X"
-
-# Social Links
-social:
-  github: "https://github.com/gvatsal60/"
-  linkedin: "https://www.linkedin.com/in/gvatsal60/"
