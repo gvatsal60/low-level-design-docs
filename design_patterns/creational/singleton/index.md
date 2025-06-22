@@ -41,6 +41,3 @@ Thread-Safe Singleton instance address: 0x55f8c8e2c320
 ```
 
 ## References
-
-- [singleton header](singleton.hpp)
-- [singleton implementation](singleton.cpp)

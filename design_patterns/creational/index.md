@@ -5,11 +5,11 @@ Explore each pattern below for concise explanations and practical code samples:
 
 ---
 
-- 🏭 [**Abstract Factory**](abstract_factory)
-- 👷 [**Builder**](builder)
-- 🧩 [**Factory Method**](factory_method)
-- 🧙 [**Prototype**](prototype)
-- 🔒 [**Singleton**](singleton)
+- 🏭 [**Abstract Factory**](abstract_factory/)
+- 👷 [**Builder**](builder/)
+- 🧩 [**Factory Method**](factory_method/)
+- 🧙 [**Prototype**](prototype/)
+- 🔒 [**Singleton**](singleton/)
 
 ---
 

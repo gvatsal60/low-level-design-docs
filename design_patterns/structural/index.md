@@ -5,13 +5,13 @@ Explore each pattern below for clear explanations and practical code samples:
 
 ---
 
-- 🧩 [**Adapter**](adapter)
-- 🏰 [**Bridge**](bridge)
-- 🖼️ [**Composite**](composite)
-- 🏞️ [**Decorator**](decorator)
-- 🏢 [**Facade**](facade)
-- 🧵 [**Flyweight**](flyweight)
-- 🔗 [**Proxy**](proxy)
+- 🧩 [**Adapter**](adapter/)
+- 🏰 [**Bridge**](bridge/)
+- 🖼️ [**Composite**](composite/)
+- 🏞️ [**Decorator**](decorator/)
+- 🏢 [**Facade**](facade/)
+- 🧵 [**Flyweight**](flyweight/)
+- 🔗 [**Proxy**](proxy/)
 
 ---
 
