@@ -16,7 +16,7 @@
       ],
       "settings": {
         "[cpp]": {
-          "editor.defaultFormatter": "ms-vscode.cpptools"
+          "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
         },
         "[markdown]": {
           "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
