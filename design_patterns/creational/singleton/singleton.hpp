@@ -94,8 +94,8 @@ private:
   // Constructor
   LazySingleton() = default;
 
-  static std::unique_ptr<LazySingleton>
-      instance; // Pointer to the singleton instance
+  // Pointer to the singleton instance
+  static std::unique_ptr<LazySingleton> instance;
 };
 
 /*
@@ -113,7 +113,7 @@ public:
   // Static method to access the `singleton` instance
   static const ThreadSafeSingleton &getInstance() {
     // Use std::call_once to ensure that the instance is created only once
-    std::call_once(initFlag, []() -> void {
+    std::call_once(initFlag, []() {
       instance =
           std::unique_ptr<ThreadSafeSingleton>(new ThreadSafeSingleton());
     });
@@ -125,8 +125,8 @@ private:
   // Constructor
   ThreadSafeSingleton() = default;
 
-  static std::unique_ptr<ThreadSafeSingleton>
-      instance;                   // Pointer to the singleton instance
+  // Pointer to the singleton instance
+  static std::unique_ptr<ThreadSafeSingleton> instance;
   static std::once_flag initFlag; // Once flag for thread-safe initialization
 };
 
