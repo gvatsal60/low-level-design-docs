@@ -83,7 +83,8 @@ public:
   // Static method to access the `singleton` instance
   static const LazySingleton &getInstance() { // Lazy initialization
     if (instance == nullptr) {
-      // Create a new instance if it doesn't exist
+      // Constructor is private, so std::make_unique can't be used. Safe to use
+      // new here. NOSONAR
       instance = std::unique_ptr<LazySingleton>(new LazySingleton());
     }
 
@@ -94,8 +95,8 @@ private:
   // Constructor
   LazySingleton() = default;
 
-  static std::unique_ptr<LazySingleton>
-      instance; // Pointer to the singleton instance
+  // Pointer to the singleton instance
+  static std::unique_ptr<LazySingleton> instance;
 };
 
 /*
@@ -113,7 +114,9 @@ public:
   // Static method to access the `singleton` instance
   static const ThreadSafeSingleton &getInstance() {
     // Use std::call_once to ensure that the instance is created only once
-    std::call_once(initFlag, []() -> void {
+    std::call_once(initFlag, []() {
+      // Constructor is private, so std::make_unique can't be used. Safe to use
+      // new here. NOSONAR
       instance =
           std::unique_ptr<ThreadSafeSingleton>(new ThreadSafeSingleton());
     });
@@ -125,8 +128,8 @@ private:
   // Constructor
   ThreadSafeSingleton() = default;
 
-  static std::unique_ptr<ThreadSafeSingleton>
-      instance;                   // Pointer to the singleton instance
+  // Pointer to the singleton instance
+  static std::unique_ptr<ThreadSafeSingleton> instance;
   static std::once_flag initFlag; // Once flag for thread-safe initialization
 };
 
