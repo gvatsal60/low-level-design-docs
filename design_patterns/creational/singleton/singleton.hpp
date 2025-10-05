@@ -48,24 +48,24 @@
  * program startup, and provides a global point of access to that instance.
  */
 class EagerSingleton final {
- public:
+public:
   // Deleted copy constructor and assignment operator to prevent copying
   EagerSingleton(const EagerSingleton &) = delete;
   EagerSingleton &operator=(const EagerSingleton &) = delete;
 
   // Static method to access the `singleton` instance
   static const EagerSingleton &getInstance() {
-    return instance;  // Return the singleton instance
+    return instance; // Return the singleton instance
   }
 
- private:
+private:
   // Constructor
   EagerSingleton() = default;
 
   // Destructor
   ~EagerSingleton() = default;
 
-  static EagerSingleton instance;  // Static instance of the singleton
+  static EagerSingleton instance; // Static instance of the singleton
 };
 
 /*
@@ -75,13 +75,13 @@ class EagerSingleton final {
  * global point of access to that instance.
  */
 class LazySingleton final {
- public:
+public:
   // Deleted copy constructor and assignment operator to prevent copying
   LazySingleton(const LazySingleton &) = delete;
   LazySingleton &operator=(const LazySingleton &) = delete;
 
   // Static method to access the `singleton` instance
-  static const LazySingleton &getInstance() {  // Lazy initialization
+  static const LazySingleton &getInstance() { // Lazy initialization
     if (instance == nullptr) {
       // Create a new instance if it doesn't exist
       instance = std::unique_ptr<LazySingleton>(new LazySingleton());
@@ -90,11 +90,12 @@ class LazySingleton final {
     return *instance;
   }
 
- private:
+private:
   // Constructor
   LazySingleton() = default;
 
-  static std::unique_ptr<LazySingleton> instance;  // Pointer to the singleton instance
+  static std::unique_ptr<LazySingleton>
+      instance; // Pointer to the singleton instance
 };
 
 /*
@@ -104,7 +105,7 @@ class LazySingleton final {
  * multithreaded environment.
  */
 class ThreadSafeSingleton final {
- public:
+public:
   // Deleted copy constructor and assignment operator to prevent copying
   ThreadSafeSingleton(const ThreadSafeSingleton &) = delete;
   ThreadSafeSingleton &operator=(const ThreadSafeSingleton &) = delete;
@@ -112,18 +113,21 @@ class ThreadSafeSingleton final {
   // Static method to access the `singleton` instance
   static const ThreadSafeSingleton &getInstance() {
     // Use std::call_once to ensure that the instance is created only once
-    std::call_once(
-        initFlag, []() -> void { instance = std::unique_ptr<ThreadSafeSingleton>(new ThreadSafeSingleton()); });
+    std::call_once(initFlag, []() -> void {
+      instance =
+          std::unique_ptr<ThreadSafeSingleton>(new ThreadSafeSingleton());
+    });
 
     return *instance;
   }
 
- private:
+private:
   // Constructor
   ThreadSafeSingleton() = default;
 
-  static std::unique_ptr<ThreadSafeSingleton> instance;  // Pointer to the singleton instance
-  static std::once_flag initFlag;                        // Once flag for thread-safe initialization
+  static std::unique_ptr<ThreadSafeSingleton>
+      instance;                   // Pointer to the singleton instance
+  static std::once_flag initFlag; // Once flag for thread-safe initialization
 };
 
 #endif
