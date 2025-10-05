@@ -20,8 +20,10 @@
  **************************************************************************************/
 
 // Initialize the static instance pointer
-LazySingleton *LazySingleton::instance = nullptr;
-ThreadSafeSingleton *ThreadSafeSingleton::instance = nullptr;
+EagerSingleton EagerSingleton::instance{};
+std::unique_ptr<LazySingleton> LazySingleton::instance{nullptr};
+std::unique_ptr<ThreadSafeSingleton> ThreadSafeSingleton::instance{nullptr};
+std::once_flag ThreadSafeSingleton::initFlag;
 
 /***************************************************************************************
  * Main Function
@@ -29,9 +31,9 @@ ThreadSafeSingleton *ThreadSafeSingleton::instance = nullptr;
 
 int main() {
   // Accessing the singleton instances
-  EagerSingleton &eagerInstance = EagerSingleton::getInstance();
-  LazySingleton &lazyInstance = LazySingleton::getInstance();
-  ThreadSafeSingleton &threadSafeInstance = ThreadSafeSingleton::getInstance();
+  const auto &eagerInstance = EagerSingleton::getInstance();
+  const auto &lazyInstance = LazySingleton::getInstance();
+  const auto &threadSafeInstance = ThreadSafeSingleton::getInstance();
 
   // Example usage of the singleton instances
   printf("Eager Singleton instance address: %p\n", &eagerInstance);
