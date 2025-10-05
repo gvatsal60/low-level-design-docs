@@ -115,8 +115,8 @@ public:
     // Use std::call_once to ensure that the instance is created only once
     std::call_once(initFlag, []() {
       // Constructor is private, so std::make_unique can't be used.
-      instance = std::unique_ptr<ThreadSafeSingleton>(
-          new ThreadSafeSingleton()); // NOSONAR
+      instance = std::unique_ptr<ThreadSafeSingleton>( // NOSONAR
+          new ThreadSafeSingleton());
     });
 
     return *instance;
