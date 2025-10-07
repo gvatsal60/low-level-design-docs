@@ -35,20 +35,20 @@
 
 // Product Interface: Transport
 class Transport {
- public:
+public:
   virtual void deliver() const = 0;
   virtual ~Transport() = default;
 };
 
 // Concrete Product: Truck
 class Truck : public Transport {
- public:
+public:
   void deliver() const override { std::puts("Delivering by land in a box."); }
 };
 
 // Concrete Product: Ship
 class Ship : public Transport {
- public:
+public:
   void deliver() const override {
     std::puts("Delivering by sea in a container.");
   }
@@ -56,36 +56,36 @@ class Ship : public Transport {
 
 // Creator (Factory) Interface
 class Logistics {
- public:
-  virtual Transport* createTransport() const = 0;
+public:
+  virtual Transport *createTransport() const = 0;
   virtual ~Logistics() = default;
 };
 
 // Concrete Creator: RoadLogistics
 class RoadLogistics : public Logistics {
- public:
-  Transport* createTransport() const override { return new Truck(); }
+public:
+  Transport *createTransport() const override { return new Truck(); }
 };
 
 // Concrete Creator: SeaLogistics
 class SeaLogistics : public Logistics {
- public:
-  Transport* createTransport() const override { return new Ship(); }
+public:
+  Transport *createTransport() const override { return new Ship(); }
 };
 
 // Logistic Service
 class LogisticService {
- public:
-  LogisticService(Logistics* logistics) : logistics_(logistics) {}
+public:
+  LogisticService(Logistics *logistics) : logistics_(logistics) {}
 
   void planDelivery() const {
-    Transport* transport = logistics_->createTransport();
+    Transport *transport = logistics_->createTransport();
     transport->deliver();
     delete transport;
   }
 
- private:
-  Logistics* logistics_;
+private:
+  Logistics *logistics_;
 };
 
 #endif
