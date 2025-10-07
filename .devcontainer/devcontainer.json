@@ -6,17 +6,17 @@
     "vscode": {
       "extensions": [
         "DavidAnson.vscode-markdownlint",
-        "MindpathTechnologyLimited.code-error-lens",
         "Tyriar.sort-lines",
         "bradzacher.vscode-copy-filename",
         "foxundermoon.shell-format",
+        "llvm-vs-code-extensions.vscode-clangd",
         "ms-azuretools.vscode-docker",
-        "ms-vscode.cpptools",
-        "streetsidesoftware.code-spell-checker"
+        "streetsidesoftware.code-spell-checker",
+        "usernamehw.errorlens"
       ],
       "settings": {
         "[cpp]": {
-          "editor.defaultFormatter": "ms-vscode.cpptools"
+          "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
         },
         "[markdown]": {
           "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"

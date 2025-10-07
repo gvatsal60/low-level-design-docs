@@ -1,7 +1,7 @@
 Language: Cpp
-BasedOnStyle: Google
+# BasedOnStyle:  Google
 AccessModifierOffset: -1
-AlignAfterOpenBracket: Align
+AlignAfterOpenBracket: DontAlign
 AlignArrayOfStructures: None
 AlignConsecutiveMacros: None
 AlignConsecutiveAssignments: None
@@ -11,11 +11,11 @@ AlignEscapedNewlines: Left
 AlignOperands: Align
 AlignTrailingComments: true
 AllowAllArgumentsOnNextLine: true
-AllowAllParametersOfDeclarationOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: false
 AllowShortEnumsOnASingleLine: true
 AllowShortBlocksOnASingleLine: Never
 AllowShortCaseLabelsOnASingleLine: false
-AllowShortFunctionsOnASingleLine: All
+AllowShortFunctionsOnASingleLine: None
 AllowShortLambdasOnASingleLine: All
 AllowShortIfStatementsOnASingleLine: WithoutElse
 AllowShortLoopsOnASingleLine: true
@@ -26,7 +26,7 @@ AlwaysBreakTemplateDeclarations: Yes
 AttributeMacros:
   - __capability
 BinPackArguments: true
-BinPackParameters: true
+BinPackParameters: false
 BraceWrapping:
   AfterCaseLabel: false
   AfterClass: false
@@ -56,8 +56,8 @@ BreakConstructorInitializersBeforeComma: false
 BreakConstructorInitializers: BeforeColon
 BreakAfterJavaFieldAnnotations: false
 BreakStringLiterals: true
-ColumnLimit: 80
-CommentPragmas: "^ IWYU pragma:"
+ColumnLimit: 120
+CommentPragmas: '^ IWYU pragma:'
 QualifierAlignment: Leave
 CompactNamespaces: false
 ConstructorInitializerIndentWidth: 4
@@ -70,6 +70,7 @@ EmptyLineAfterAccessModifier: Never
 EmptyLineBeforeAccessModifier: LogicalBlock
 ExperimentalAutoDetectBinPacking: false
 PackConstructorInitializers: NextLine
+BasedOnStyle: ''
 ConstructorInitializerAllOnOneLineOrOnePerLine: false
 AllowAllConstructorInitializersOnNextLine: true
 FixNamespaceComments: true
@@ -89,16 +90,16 @@ IncludeCategories:
     Priority: 1
     SortPriority: 0
     CaseSensitive: false
-  - Regex: "^<.*"
+  - Regex: '^<.*'
     Priority: 2
     SortPriority: 0
     CaseSensitive: false
-  - Regex: ".*"
+  - Regex: '.*'
     Priority: 3
     SortPriority: 0
     CaseSensitive: false
-IncludeIsMainRegex: "([-_](test|unittest))?$"
-IncludeIsMainSourceRegex: ""
+IncludeIsMainRegex: '([-_](test|unittest))?$'
+IncludeIsMainSourceRegex: ''
 IndentAccessModifiers: false
 IndentCaseLabels: true
 IndentCaseBlocks: false
@@ -113,8 +114,8 @@ JavaScriptQuotes: Leave
 JavaScriptWrapImports: true
 KeepEmptyLinesAtTheStartOfBlocks: false
 LambdaBodyIndentation: Signature
-MacroBlockBegin: ""
-MacroBlockEnd: ""
+MacroBlockBegin: ''
+MacroBlockEnd: ''
 MaxEmptyLinesToKeep: 1
 NamespaceIndentation: None
 ObjCBinPackProtocolList: Never
@@ -142,9 +143,9 @@ RawStringFormats:
       - cpp
       - Cpp
       - CPP
-      - "c++"
-      - "C++"
-    CanonicalDelimiter: ""
+      - 'c++'
+      - 'C++'
+    CanonicalDelimiter: ''
     BasedOnStyle: google
   - Language: TextProto
     Delimiters:
@@ -220,6 +221,3 @@ WhitespaceSensitiveMacros:
   - BOOST_PP_STRINGIZE
   - NS_SWIFT_NAME
   - CF_SWIFT_NAME
----
-Language: Json
-BasedOnStyle: Google
