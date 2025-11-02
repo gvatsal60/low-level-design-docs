@@ -36,75 +36,62 @@
  **************************************************************************************/
 
 // Product Interface: Transport
-class Transport
-{
+class Transport {
 public:
   virtual ~Transport() = default;
   virtual void deliver() const = 0;
 };
 
 // Concrete Product: Truck
-class Truck : public Transport
-{
+class Truck : public Transport {
 public:
   void deliver() const override { std::puts("Delivering by land in a box."); }
 };
 
 // Concrete Product: Ship
-class Ship : public Transport
-{
+class Ship : public Transport {
 public:
-  void deliver() const override
-  {
+  void deliver() const override {
     std::puts("Delivering by sea in a container.");
   }
 };
 
 // Creator (Factory) Interface
-class Logistics
-{
+class Logistics {
 public:
   virtual ~Logistics() = default;
   virtual Transport *createTransport() const = 0;
 };
 
 // Concrete Creator: RoadLogistics
-class RoadLogistics : public Logistics
-{
+class RoadLogistics : public Logistics {
 public:
-  Transport *createTransport() const override
-  {
+  Transport *createTransport() const override {
     std::shared_ptr<Transport> truckPtr = std::make_shared<Truck>();
     return truckPtr.get();
   }
 };
 
 // Concrete Creator: SeaLogistics
-class SeaLogistics : public Logistics
-{
+class SeaLogistics : public Logistics {
 public:
-  Transport *createTransport() const override
-  {
+  Transport *createTransport() const override {
     std::shared_ptr<Transport> shipPtr = std::make_shared<Ship>();
     return shipPtr.get();
   }
 };
 
 // Logistic Service
-class LogisticService
-{
+class LogisticService {
 public:
-  explicit LogisticService(Logistics *const logistics)
-  {
-    if (logistics == nullptr)
-    {
+  explicit LogisticService(Logistics *const logistics) {
+    if (logistics == nullptr) {
       throw std::invalid_argument("Logistics pointer cannot be null");
     }
     logistics_ = logistics;
   }
 
-  void planDelivery() const
-  {
+  void planDelivery() const {
     auto *transport = logistics_->createTransport();
     transport->deliver();
   }
