@@ -19,7 +19,7 @@
  * Class Methods Definitions
  **************************************************************************************/
 
-int main(int argc, char const *argv[]) {
+int main() {
   RoadLogistics roadLogistics{};
   LogisticService road_logistic_ser(&roadLogistics);
   road_logistic_ser.planDelivery();
