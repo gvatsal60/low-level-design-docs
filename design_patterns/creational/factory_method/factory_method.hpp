@@ -92,7 +92,7 @@ public:
   }
 
   void planDelivery() const {
-    auto *transport = logistics_->createTransport();
+    const auto * const transport = logistics_->createTransport();
     transport->deliver();
   }
 
